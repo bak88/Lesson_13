@@ -1,9 +1,9 @@
+package Task_1;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Student {
-
-    Random random = new Random();
 
     private String name;
     private String group;
@@ -19,20 +19,9 @@ public class Student {
         averageScore = findAverageScore();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getGroup() {
-        return group;
-    }
 
     public int getCourse() {
         return course;
-    }
-
-    public ArrayList<Integer> getEvaluations() {
-        return evaluations;
     }
 
     public int getAverageScore() {
@@ -41,6 +30,7 @@ public class Student {
 
     private ArrayList<Integer> fillEvaluations() {
 
+        Random random = new Random();
         evaluations = new ArrayList<>();
         int size = 10;
 
@@ -60,14 +50,6 @@ public class Student {
         int result = sum / evaluations.size();
 
         return result;
-    }
-
-    public void printEvaluations() {
-
-        for (int number : evaluations)
-            System.out.print(number + " ");
-
-        System.out.println();
     }
 
     @Override
